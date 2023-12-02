@@ -1,44 +1,98 @@
-body {
+/* Sélectionne tous les éléments du formulaire */
+#product-form * {
+    /* Définit la police de caractères */
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-div {
-    width: 80%;
-    margin: 20px auto;
+  }
+  
+  /* Sélectionne le conteneur du formulaire */
+  #product-form {
+    /* Définit la largeur maximale */
+    max-width: 600px;
+    /* Définit la bordure */
+    border: 2px solid #333;
+    /* Définit le padding */
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  }
+  
+  /* Sélectionne le titre du formulaire */
+  #product-form h1 {
+    /* Centre le texte */
+    text-align: center;
+    /* Définit la couleur du texte */
     color: #333;
-}
-
-p {
-    line-height: 1.6;
-}
+  }
+  
+  /* Sélectionne les labels du formulaire */
+  #product-form label {
+    /* Affiche les éléments en bloc */
+    display: block;
+    /* Définit la marge inférieure */
+    margin-bottom: 5px;
+  }
+  
+  /* Sélectionne les inputs et les textareas du formulaire */
+  #product-form input, #product-form textarea {
+    /* Définit la largeur */
+    width: 100%;
+    /* Définit la hauteur */
+    height: 30px;
+    /* Définit la marge inférieure */
+    margin-bottom: 10px;
+    /* Définit le padding */
+    padding: 5px;
+    /* Définit la bordure */
+    border: 1px solid #ccc;
+    /* Arrondit les coins */
+    border-radius: 5px;
+    /* Définit la couleur du texte */
+    color: #333;
+    /* Définit la couleur de fond */
+    background-color: #fff;
+    /* Prend en compte la bordure et le padding dans la largeur */
+    box-sizing: border-box;
+  }
+  
+  /* Sélectionne la textarea du formulaire */
+  #product-form textarea {
+    /* Ajuste la hauteur en fonction du contenu */
+    height: auto;
+  }
+  
+  /* Sélectionne le bouton du formulaire */
+  #product-form input[type="submit"] {
+    /* Définit la hauteur */
+    height: 25px;
+    /* Définit la largeur */
+    width: 100px;
+    /* Définit la couleur du texte */
+    color: #fff;
+    /* Définit la couleur de fond */
+    background-color: #333;
+    /* Ajoute une ombre */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Change le curseur */
+    cursor: pointer;
+    /* Déplace le bouton vers la gauche */
+    float: left;
+  }
+  
+  /* Sélectionne le bouton du formulaire quand il est survolé */
+  #product-form input[type="submit"]:hover {
+    /* Assombrit la couleur de fond */
+    background-color: #222;
+  }
+  
+  /* Sélectionne les inputs et les textareas du formulaire quand ils sont sélectionnés */
+  #product-form input:focus, #product-form textarea:focus {
+    /* Change la couleur de la bordure */
+    border-color: #333;
+  }
+  
+  /* Sélectionne les messages d'erreur du formulaire */
+  #product-form .error-message {
+    /* Définit la couleur du texte */
+    color: #f00;
+    /* Définit la taille du texte */
+    font-size: 12px;
+  }
+  
