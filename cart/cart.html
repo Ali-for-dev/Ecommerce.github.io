@@ -122,6 +122,13 @@
        background-color: #4285f4;
        }
    </style>
+   <html>
+     <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     </head>
+     <body>
+       
+    
     <div class="container h-100 py-5">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
@@ -218,33 +225,35 @@
   
                   <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
   
-                  <form class="mb-5">
+                  <form action="../checkout/checkout.html" method="post" class="mb-5" name="cardinfo" id="cardinfo">
   
                     <div class="form-outline mb-5">
-                      <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                        value="1234 5678 9012 3457" minlength="19" maxlength="19" />
-                      <label class="form-label" for="typeText">Card Number</label>
+                      <input type="text" id="cardnumber" class="form-control form-control-lg"  />
+                      <label class="form-label" for="typeText">Card Number</label><br>
+                      <span id="email-error" class="error-message"></span>
+                      
                     </div>
   
                     <div class="form-outline mb-5">
-                      <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                        value="John Smith" />
-                      <label class="form-label" for="typeName">Name on card</label>
+                      <input type="text" id="nameoncard" class="form-control form-control-lg" siez="17"
+                         />
+                      <label class="form-label" for="typeName">Name on card</label><br>
+                      <span id="name-error" class="error-message"></span>
                     </div>
   
                     <div class="row">
                       <div class="col-md-6 mb-5">
                         <div class="form-outline">
-                          <input type="text" id="typeExp" class="form-control form-control-lg" value="01/22"
-                            size="7" id="exp" minlength="7" maxlength="7" />
-                          <label class="form-label" for="typeExp">Expiration</label>
+                          <input type="text" id="exp" class="form-control form-control-lg" />
+                          <label class="form-label" for="typeExp">Expiration</label><br>
+                          <span id="exp-error" class="error-message"></span>
                         </div>
                       </div>
                       <div class="col-md-6 mb-5">
                         <div class="form-outline">
-                          <input type="password" id="typeText" class="form-control form-control-lg"
-                            value="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-                          <label class="form-label" for="typeText">Cvv</label>
+                          <input type="password" id="cvv" class="form-control form-control-lg"/>
+                          <label class="form-label" for="typeText">Cvv</label><br>
+                          <span id="cvv-error" class="error-message"></span>
                         </div>
                       </div>
                     </div>
@@ -252,7 +261,7 @@
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit <a
                         href="#!">obcaecati sapiente</a>.</p>
   
-                    <a href="../checkout/checkout.html"><button type="button" class="btn btn-primary btn-block btn-lg">Buy now</button>
+                    <input type="submit" id="buynow" class="btn btn-primary btn-block btn-lg" value="BUY NOW">
                     </a>
                     <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
                       <a href="../index.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
@@ -268,4 +277,6 @@
         </div>
       </div>
     </div>
-  </section>
+    <script src="cart.js"></script>
+   </body>
+  </html></section>
